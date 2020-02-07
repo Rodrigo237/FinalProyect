@@ -1455,6 +1455,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9192711292484223137}
   - component: {fileID: 1232035723623411163}
+  - component: {fileID: 4325025087718748798}
+  - component: {fileID: 629805278}
+  - component: {fileID: 629805279}
   m_Layer: 0
   m_Name: MessiReady Idle
   m_TagString: Untagged
@@ -1469,9 +1472,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5316582853346620082}
-  m_LocalRotation: {x: -0, y: 0.79822785, z: -0, w: 0.60235566}
+  m_LocalRotation: {x: 0, y: 0.7982257, z: 0, w: 0.60235846}
   m_LocalPosition: {x: -1.27, y: 0, z: -7.55}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 13.5, y: 13.5, z: 13.5}
   m_Children:
   - {fileID: 349071615476145220}
   - {fileID: 8676678198669156903}
@@ -1488,15 +1491,70 @@ Animator:
   m_GameObject: {fileID: 5316582853346620082}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 4762e3f9dcbb76f46b66725f1d303b03, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aeee40c80a211ab45a2591fe11f31bd8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+    'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
+    'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
+    'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
+    'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom
+    animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation
+    clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip
+    'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4325025087718748798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316582853346620082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6492f96e402630544901742c0fef0412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  jumpForce: 0
+  player: {fileID: 1232035723623411163}
+  isOnTheGround: 0
+--- !u!54 &629805278
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316582853346620082}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.5
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 3
+--- !u!136 &629805279
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316582853346620082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.34
+  m_Height: 1.52
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &5328318182416533207
 GameObject:
   m_ObjectHideFlags: 0
