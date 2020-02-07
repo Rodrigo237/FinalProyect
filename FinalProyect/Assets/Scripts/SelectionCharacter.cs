@@ -9,6 +9,8 @@ public class SelectionCharacter : MonoBehaviour
 
    public  void SelectionPulga()
     {
+        //DontDestroyOnLoad(this.gameObject);
+        //this.getcomponent<>().enabled=; |
         pulgaSelection.transform.tag = "Player";
         SceneManager.LoadScene(1);
     }
