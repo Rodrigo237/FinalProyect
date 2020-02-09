@@ -11,13 +11,13 @@ public class SelectionCharacter : MonoBehaviour
     {
         //DontDestroyOnLoad(this.gameObject);
         //this.getcomponent<>().enabled=; |
-        pulgaSelection.transform.tag = "Player";
+     //   pulgaSelection.transform.tag = "Player";
         SceneManager.LoadScene(1);
     }
 
     public void SelectionCR()
     {
-        comandanteSelection.transform.tag = "Player";
+    //    comandanteSelection.transform.tag = "Player";
         SceneManager.LoadScene(1);
     }
 }

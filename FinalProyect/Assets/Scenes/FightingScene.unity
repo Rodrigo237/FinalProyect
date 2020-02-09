@@ -121,28 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &27851514 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5248836372041473546, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
+--- !u!4 &27851520 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
     type: 3}
   m_PrefabInstance: {fileID: 904384319}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &27851515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27851514}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6492f96e402630544901742c0fef0412, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  jumpForce: 0
-  player: {fileID: 0}
-  isOnTheGround: 0
 --- !u!1001 &134650712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,34 +560,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 629805278, guid: 629ab09cdfc026a43b9af8ecaf54d99c, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1232035723623411163, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1232035723623411163, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: aeee40c80a211ab45a2591fe11f31bd8, type: 2}
-    - target: {fileID: 1232035723623411163, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4325025087718748798, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5316582853346620082, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_Name
       value: MessiReady Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5316582853346620082, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
@@ -623,22 +588,22 @@ PrefabInstance:
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.79822785
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.60235566
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
@@ -653,7 +618,7 @@ PrefabInstance:
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 105.922005
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
@@ -674,6 +639,8 @@ GameObject:
   - component: {fileID: 652012462}
   - component: {fileID: 652012461}
   - component: {fileID: 652012464}
+  - component: {fileID: 652012465}
+  - component: {fileID: 652012466}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -777,6 +744,37 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &652012465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652012460}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 320e5f5c2671f7e429c159223f14ad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yOffset: 2
+  minDistance: 7
+--- !u!114 &652012466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652012460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f567ab76ecae74193f3745f2a14650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1335583315}
+  - {fileID: 27851520}
+  offset: {x: 0, y: 13.3, z: -27}
+  smoothTime: 0.5
 --- !u!1 &756071795
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,30 +1000,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1154828915390071139, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: cec590818ccbc7446858271dc50b5c08, type: 2}
-    - target: {fileID: 1154828915390071139, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
-        type: 3}
-      propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'mixamo.com'\n\tFrom
-        animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation
-        clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip
-        'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom
-        animation clip 'mixamo.com'"
-      objectReference: {fileID: 0}
     - target: {fileID: 5248836372041473546, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_Name
       value: CR7Ready Idle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5248836372041473546, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
@@ -1045,22 +1028,22 @@ PrefabInstance:
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5374359
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8433046
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
@@ -1075,7 +1058,7 @@ PrefabInstance:
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -65.019005
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 9118879975082585113, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
@@ -1152,7 +1135,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 652012462}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1256,6 +1239,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1329945813}
   m_CullTransparentMesh: 0
+--- !u!4 &1335583315 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9192711292484223137, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
+    type: 3}
+  m_PrefabInstance: {fileID: 629805276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1356945103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,7 +2011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1935544132
 Transform:
   m_ObjectHideFlags: 0

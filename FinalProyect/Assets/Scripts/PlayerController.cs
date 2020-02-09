@@ -33,7 +33,10 @@ public class PlayerController : MonoBehaviour
             player.SetTrigger("Jab");
 
         if (Input.GetKeyDown(KeyCode.A))
-            player.SetTrigger("SpeedB");
+            player.SetTrigger("WalkBack");
+
+        if (Input.GetKeyDown(KeyCode.W))
+            player.SetTrigger("Jump");
 
     }
 }
