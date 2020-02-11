@@ -19,6 +19,9 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D))
             player.SetTrigger("Speed");
+
+        if (Input.GetKeyUp(KeyCode.D))
+            player.SetTrigger("Stop");
         
         if (Input.GetKeyDown(KeyCode.I))
             player.SetTrigger("Punch");
@@ -34,6 +37,9 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
             player.SetTrigger("WalkBack");
+
+        if (Input.GetKeyUp(KeyCode.A))
+            player.SetTrigger("Stop");
 
         if (Input.GetKeyDown(KeyCode.W))
             player.SetTrigger("Jump");
