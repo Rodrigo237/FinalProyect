@@ -1459,9 +1459,10 @@ GameObject:
   - component: {fileID: 629805278}
   - component: {fileID: 629805279}
   - component: {fileID: 2904984768079507963}
+  - component: {fileID: 762523466267791934}
   m_Layer: 0
   m_Name: MessiReady Idle
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1569,6 +1570,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &762523466267791934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5316582853346620082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee9b5d28f2fc2d40853c918fb725ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &5328318182416533207
 GameObject:
   m_ObjectHideFlags: 0

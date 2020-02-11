@@ -1455,6 +1455,7 @@ GameObject:
   - component: {fileID: 777790455}
   - component: {fileID: 904384321}
   - component: {fileID: 27851515}
+  - component: {fileID: -3379463341330306673}
   m_Layer: 0
   m_Name: CR7Ready Idle
   m_TagString: Player
@@ -1566,6 +1567,19 @@ MonoBehaviour:
   jumpForce: 0
   player: {fileID: 0}
   isOnTheGround: 0
+--- !u!114 &-3379463341330306673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248836372041473546}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eee9b5d28f2fc2d40853c918fb725ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!1 &5255184102691678831
 GameObject:
   m_ObjectHideFlags: 0
