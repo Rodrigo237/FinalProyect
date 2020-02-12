@@ -9,9 +9,13 @@ public class PlayerController : MonoBehaviour
     public Animator player;
     public bool isOnTheGround;
     // Start is called before the first frame update
+    public AudioClip[] sfx;
+    private AudioSource playerSource;
+    public int life;
     void Start()
     {
         player = GetComponent<Animator>();
+        playerSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,18 +26,29 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.D))
             player.SetTrigger("Stop");
-        
+
         if (Input.GetKeyDown(KeyCode.I))
+        {
             player.SetTrigger("Punch");
+            playerSource.PlayOneShot(sfx[0]);
+        }
 
         if (Input.GetKeyDown(KeyCode.J))
+        {
             player.SetTrigger("KickR");
+            playerSource.PlayOneShot(sfx[1]);
+        }
 
         if (Input.GetKeyDown(KeyCode.K))
+        {
             player.SetTrigger("KickL");
-
+            playerSource.PlayOneShot(sfx[1]);
+        }
         if (Input.GetKeyDown(KeyCode.U))
+        {
             player.SetTrigger("Jab");
+            playerSource.PlayOneShot(sfx[0]);
+        }
 
         if (Input.GetKeyDown(KeyCode.A))
             player.SetTrigger("WalkBack");
@@ -43,6 +58,20 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
             player.SetTrigger("Jump");
+            
+        
+    }
 
+    public void hurt(float damage)
+    {
+
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.transform.tag == "Enemy")
+        {
+            playerSource.PlayOneShot(sfx[2]);
+        }
     }
 }

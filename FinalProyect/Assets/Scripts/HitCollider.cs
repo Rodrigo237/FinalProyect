@@ -13,7 +13,15 @@ public class HitCollider : MonoBehaviour
 
         if(somebody != null && somebody != owner)
         {
-            Debug.Log("Punch");
+            if (owner.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Punch"))
+            {
+                Debug.Log("Punch");
+                if(somebody != null && somebody != owner)
+                {
+                    somebody.hurt(Damage);
+                }
+            }
+
         }
     }
 }
