@@ -16,6 +16,7 @@ public class Reloj : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(startTime >=0)
         startTime -= Time.deltaTime;
         timeToText = (int)startTime;
         ContadorText.text = timeToText.ToString();
