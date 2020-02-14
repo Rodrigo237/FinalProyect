@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
+  
     public float jumpForce;
     public Animator player;
+    private Rigidbody RBplayer; 
     public bool isOnTheGround;
     // Start is called before the first frame update
     public AudioClip[] sfx;
     private AudioSource playerSource;
+    public GameObject badBoost;
+    private bool isActiveBoost;
     public int life;
     void Start()
     {
         player = GetComponent<Animator>();
         playerSource = GetComponent<AudioSource>();
+        RBplayer = GetComponent<Rigidbody>();
+        badBoost.SetActive(false);
+        isActiveBoost = false;
     }
 
     // Update is called once per frame
@@ -56,9 +62,17 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A))
             player.SetTrigger("Stop");
 
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) && isOnTheGround)
+        {
             player.SetTrigger("Jump");
-            
+            RBplayer.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+
+        if(Input.GetKeyDown(KeyCode.O) && isActiveBoost)
+        {
+            player.SetTrigger("Boost");
+            playerSource.PlayOneShot(sfx[0]);
+        }
         
     }
 
@@ -72,6 +86,21 @@ public class PlayerController : MonoBehaviour
         if(collision.transform.tag == "Enemy")
         {
             playerSource.PlayOneShot(sfx[2]);
+        }
+
+        if (collision.gameObject.tag == "Ground")
+        {
+            isOnTheGround = true;
+        } 
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Bate")
+        {
+            badBoost.SetActive(true);
+            isActiveBoost = true;
         }
     }
 }

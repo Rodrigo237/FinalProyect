@@ -1730,7 +1730,6 @@ GameObject:
   - component: {fileID: 9118879975082585113}
   - component: {fileID: 1154828915390071139}
   - component: {fileID: 777790456}
-  - component: {fileID: 777790455}
   - component: {fileID: 904384321}
   - component: {fileID: 27851515}
   - component: {fileID: -3379463341330306673}
@@ -1794,20 +1793,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 2
---- !u!136 &777790455
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5248836372041473546}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.34
-  m_Height: 1.64
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.81, z: 0}
 --- !u!195 &904384321
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1842,7 +1827,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6492f96e402630544901742c0fef0412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
   jumpForce: 0
   player: {fileID: 1154828915390071139}
   isOnTheGround: 0
@@ -1850,6 +1834,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2b1cf1f3751a534cbdb2b0b37974dbf, type: 3}
   - {fileID: 8300000, guid: a172d66cfb260a345868d30cb873f339, type: 3}
   - {fileID: 8300000, guid: 4ebbe02eb55b3ce4d9acafa4bb0770d7, type: 3}
+  life: 0
 --- !u!114 &-3379463341330306673
 MonoBehaviour:
   m_ObjectHideFlags: 0
