@@ -1226,7 +1226,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3320867150202837878}
-  m_LocalRotation: {x: 0.7268557, y: -0.025938794, z: 0.054730717, w: 0.6841144}
+  m_LocalRotation: {x: 0.7268557, y: -0.025938796, z: 0.054730717, w: 0.68411446}
   m_LocalPosition: {x: 0.00000080036136, y: 0.016374888, z: 2.4474152e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1854,7 +1854,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee9b5d28f2fc2d40853c918fb725ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemyAnimator: {fileID: 1232035723623411163}
+  lifeEnemy: 0
+  currentHealth: 0
+  life: 1
 --- !u!82 &3310571963236060220
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2669,7 +2672,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8891675155208151808}
-  m_LocalRotation: {x: -0.050925218, y: -0.04613711, z: 0.11833757, w: 0.99059284}
+  m_LocalRotation: {x: -0.05092522, y: -0.04613711, z: 0.11833758, w: 0.99059284}
   m_LocalPosition: {x: -0.0024747972, y: 0.021118835, z: -8.848165e-11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:

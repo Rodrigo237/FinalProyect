@@ -1734,9 +1734,10 @@ GameObject:
   - component: {fileID: 27851515}
   - component: {fileID: -3379463341330306673}
   - component: {fileID: 1875732095}
+  - component: {fileID: 1227031813}
   m_Layer: 0
   m_Name: CR7Ready Idle
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1822,7 +1823,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5248836372041473546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6492f96e402630544901742c0fef0412, type: 3}
   m_Name: 
@@ -1834,6 +1835,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b2b1cf1f3751a534cbdb2b0b37974dbf, type: 3}
   - {fileID: 8300000, guid: a172d66cfb260a345868d30cb873f339, type: 3}
   - {fileID: 8300000, guid: 4ebbe02eb55b3ce4d9acafa4bb0770d7, type: 3}
+  badBoost: {fileID: 0}
   life: 0
 --- !u!114 &-3379463341330306673
 MonoBehaviour:
@@ -1847,7 +1849,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee9b5d28f2fc2d40853c918fb725ba0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
+  enemyAnimator: {fileID: 1154828915390071139}
+  lifeEnemy: 0
+  currentHealth: 0
+  life: 1
 --- !u!82 &1875732095
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1945,6 +1950,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1227031813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5248836372041473546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.56, y: 1.4, z: 0.32}
+  m_Center: {x: 0, y: 0.72, z: 0.09}
 --- !u!1 &5255184102691678831
 GameObject:
   m_ObjectHideFlags: 0
