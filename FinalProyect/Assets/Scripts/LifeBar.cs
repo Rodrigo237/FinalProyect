@@ -20,8 +20,7 @@ public class LifeBar : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Damage()
     {
         this.LifeBarImage.fillAmount -= 0.1f;
         if (this.LifeBarImage.fillAmount == 0)

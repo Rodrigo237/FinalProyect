@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Ground
   - Bate
+  - FxTemporaire
+  - Hit
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 394262363}
   m_Layer: 0
   m_Name: KickColliderLeftFoot
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 1311374462}
   m_Layer: 0
   m_Name: HitColliderHandLeft
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 1467969973}
   m_Layer: 0
   m_Name: KickColliderRightFoot
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4112248606650127728}
   m_Layer: 0
   m_Name: HitColliderHandRight
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -257,7 +257,7 @@ SphereCollider:
   m_GameObject: {fileID: 2041851162}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -2767,6 +2767,11 @@ PrefabInstance:
       propertyPath: owner
       value: 
       objectReference: {fileID: 4325025087718748798}
+    - target: {fileID: 7625880178445949474, guid: 901829383d31e23468ec0e8526501d9a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 901829383d31e23468ec0e8526501d9a, type: 3}
 --- !u!1 &1942595739409532781 stripped

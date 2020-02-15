@@ -7,12 +7,12 @@ public class EnemyController : MonoBehaviour
     public Animator enemyAnimator;
     private NavMeshAgent enemyAgent;
     private Transform playerTransform;
-    public float lifeEnemy;
-    public float currentHealth;
+    public int lifeEnemy;
+    public int currentHealth;
     public bool life = true;
     private float Random;
     private float randomSetTime;
-    
+     
     // Start is called before the first frame update
     void Start()
     {
@@ -37,4 +37,15 @@ public class EnemyController : MonoBehaviour
         else
             enemyAnimator.SetTrigger("Speed");
     }
+
+    private void OnTriggerEnter(Collider col)
+    {
+        if(col.tag == "Hit")
+        {
+            currentHealth--;
+            lifebar.Damage();
+        }
+    }
+
+    
 }

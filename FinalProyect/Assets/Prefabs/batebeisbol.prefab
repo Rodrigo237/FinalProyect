@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 200879144528771057}
   - component: {fileID: 7625880178445949474}
   - component: {fileID: 3326510324496273397}
+  - component: {fileID: -3054796021554284933}
+  - component: {fileID: 2025047497366986490}
   m_Layer: 0
   m_Name: batebeisbol
   m_TagString: Bate
@@ -110,3 +112,34 @@ MonoBehaviour:
   punchName: BatePunch
   Damage: 10
   owner: {fileID: 0}
+--- !u!114 &-3054796021554284933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942595738676085549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d574d257d9ba047a38915b3c6d7c93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2025047497366986490
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942595738676085549}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 850d5b7e62e94fe44bcdf6b8ff39df02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
