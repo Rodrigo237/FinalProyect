@@ -254,7 +254,7 @@ SphereCollider:
   m_GameObject: {fileID: 2041851162}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -1799,7 +1799,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a172d66cfb260a345868d30cb873f339, type: 3}
   - {fileID: 8300000, guid: 4ebbe02eb55b3ce4d9acafa4bb0770d7, type: 3}
   badBoost: {fileID: 1942595739409532781}
-  life: 0
+  life: 2
   currentHealth: 0
 --- !u!54 &629805278
 Rigidbody:
@@ -1852,9 +1852,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 1232035723623411163}
-  lifeEnemy: 0
+  lifeEnemy: 2
   currentHealth: 0
   life: 1
+  jumpEnemy: 0
 --- !u!82 &3310571963236060220
 AudioSource:
   m_ObjectHideFlags: 0

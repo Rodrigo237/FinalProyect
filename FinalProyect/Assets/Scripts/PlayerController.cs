@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
   
@@ -70,12 +70,16 @@ public class PlayerController : MonoBehaviour
             RBplayer.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
 
-        if(Input.GetKeyDown(KeyCode.O) && isActiveBoost)
+        if(Input.GetKeyDown(KeyCode.L) && isActiveBoost)
         {
             player.SetTrigger("Boost");
             playerSource.PlayOneShot(sfx[0]);
         }
         
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            player.SetTrigger("Defense");
+        }
     }
 
   
@@ -100,21 +104,43 @@ public class PlayerController : MonoBehaviour
         {
             if (other.tag == "Bate")
             {
-                badBoost.SetActive(true);
+                if (gameObject.activeInHierarchy)
+                {
+                    badBoost.SetActive(true);
+                }
                 isActiveBoost = true;
             }
         }
-       if (other.tag == "Hit")
+       if (other.tag == "Hit" && !player.GetCurrentAnimatorStateInfo(0).IsName("Defense"))
             {
                 currentHealth--;
                 LifeBarPlayer.instanceLife.Damage();
+               
             }
-        
+        DeadPlayer();
     }
 
     private void DeadPlayer()
     {
-        if (LifeBarPlayer.instanceLife.LifeBarImageDanger.fillAmount == 0)
+        if (LifeBarPlayer.instanceLife.LifeBarImageDanger.fillAmount == 0 && DataLoader.instance.currentPlayer.lives>0)
+        {
             player.SetTrigger("Dying");
+            life--;
+            DataLoader.instance.currentPlayer.lives--;
+            DataLoader.instance.currentPlayer.defeats++;
+            DataLoader.instance.currentPlayer.Round += 1;
+            DataLoader.instance.WriteData();
+            SceneManager.LoadScene(1);
+        }
+        if(DataLoader.instance.currentPlayer.lives == 0 )
+        {
+            DataLoader.instance.currentPlayer.lives = 2;
+            DataLoader.instance.currentEnemy.livesEnemy = 2;
+            DataLoader.instance.currentPlayer.Round = 1;
+            DataLoader.instance.WriteData();
+            DataLoader.instance.WriteDataEnemy();
+            SceneManager.LoadScene(0);
+        }
+
     }
 }

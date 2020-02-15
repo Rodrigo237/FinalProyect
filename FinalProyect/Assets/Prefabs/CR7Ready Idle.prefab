@@ -1832,7 +1832,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a172d66cfb260a345868d30cb873f339, type: 3}
   - {fileID: 8300000, guid: 4ebbe02eb55b3ce4d9acafa4bb0770d7, type: 3}
   badBoost: {fileID: 0}
-  life: 0
+  life: 2
   currentHealth: 0
 --- !u!114 &-3379463341330306673
 MonoBehaviour:
@@ -1847,9 +1847,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyAnimator: {fileID: 1154828915390071139}
-  lifeEnemy: 0
+  lifeEnemy: 2
   currentHealth: 0
   life: 1
+  jumpEnemy: 5
 --- !u!82 &1875732095
 AudioSource:
   m_ObjectHideFlags: 0

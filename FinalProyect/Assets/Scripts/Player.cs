@@ -8,4 +8,5 @@ public class Player
     public int defeats;
     public float musicVolume;
     public float sfxVolume;
+    public int Round;
 }

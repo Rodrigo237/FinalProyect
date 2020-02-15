@@ -34,6 +34,7 @@ public class DataLoader : MonoBehaviour
             currentPlayer.defeats = 0;
             currentPlayer.musicVolume = 0;
             currentPlayer.sfxVolume = 0;
+            currentPlayer.Round = 1;
         }
 
         if (File.Exists(Application.persistentDataPath + "/" + fileEnemy))

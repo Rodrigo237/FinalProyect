@@ -29,8 +29,8 @@ public class LifeBar : MonoBehaviour
 
     public void Damage()
     {
-        this.LifeBarImage.fillAmount -= 0.03f;
+        this.LifeBarImage.fillAmount -= 0.01f;
         if (this.LifeBarImage.fillAmount == 0)
-            this.LifeBarImageDanger.fillAmount -= 0.03f;
+            this.LifeBarImageDanger.fillAmount -= 0.01f;
     }
 }

@@ -12,6 +12,7 @@ public class UIManagerInGame : MonoBehaviour
     //HUD Elements
     public TextMeshProUGUI victoriesText;
     public TextMeshProUGUI defeatsText;
+    public TextMeshProUGUI roundText;
     //Pause Elements
     public Slider musicSlider;
     public Slider sfxSlider;
@@ -30,8 +31,9 @@ public class UIManagerInGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        victoriesText.text = "x" + DataLoader.instance.currentPlayer.victories;
-        defeatsText.text = "x" + DataLoader.instance.currentPlayer.defeats;
+        victoriesText.text = " Wins x" + DataLoader.instance.currentPlayer.victories;
+        defeatsText.text = "Losses x" + DataLoader.instance.currentPlayer.defeats;
+        roundText.text = "Round  " + DataLoader.instance.currentPlayer.Round;
     }
 
     private void CleanUI()
