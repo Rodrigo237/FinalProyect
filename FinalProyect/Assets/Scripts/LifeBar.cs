@@ -10,9 +10,16 @@ public class LifeBar : MonoBehaviour
     private float lifeEnemy;
     private float currentHealth;
     private float startTime;
+    public static LifeBar instanceLife;
+    
+    void Awake()
+    {
+        instanceLife = this;
+    }
     // Start is called before the first frame update
     void Start()
     {
+       
         LifeBarImage.fillAmount = 1;
         LifeBarImageDanger.fillAmount = 1;
         startTime = Time.time;
@@ -22,8 +29,8 @@ public class LifeBar : MonoBehaviour
 
     public void Damage()
     {
-        this.LifeBarImage.fillAmount -= 0.1f;
+        this.LifeBarImage.fillAmount -= 0.03f;
         if (this.LifeBarImage.fillAmount == 0)
-            this.LifeBarImageDanger.fillAmount -= 0.1f;
+            this.LifeBarImageDanger.fillAmount -= 0.03f;
     }
 }

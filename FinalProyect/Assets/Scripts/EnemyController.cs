@@ -12,7 +12,7 @@ public class EnemyController : MonoBehaviour
     public bool life = true;
     private float Random;
     private float randomSetTime;
-     
+    private float randomHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,16 +26,26 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         enemyAgent.SetDestination(playerTransform.position);
-        Debug.Log("Distance to player: " + enemyAgent.remainingDistance);
+       
         enemyAnimator.SetTrigger("Speed");
 
         if (enemyAgent.remainingDistance <= 7f && enemyAgent.hasPath)
         {
             enemyAnimator.SetTrigger("Stop");
+            randomHit = Random.Range(0, 3);
+            switch (randomHit){
+                case 0:
             enemyAnimator.SetTrigger("Punch");
+                    break;
+                        case 1:
+                    enemyAnimator.SetTrigger("Jab");
+                    break;
+            }
         }
         else
             enemyAnimator.SetTrigger("Speed");
+
+        
     }
 
     private void OnTriggerEnter(Collider col)
@@ -43,9 +53,14 @@ public class EnemyController : MonoBehaviour
         if(col.tag == "Hit")
         {
             currentHealth--;
-            lifebar.Damage();
+            LifeBar.instanceLife.Damage();
+            Dead();
         }
     }
 
-    
+    private void Dead()
+    {
+        if (LifeBar.instanceLife.LifeBarImageDanger.fillAmount == 0)
+            enemyAnimator.SetTrigger("Dying");
+    }
 }

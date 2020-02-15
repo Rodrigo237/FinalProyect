@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public GameObject badBoost;
     private bool isActiveBoost;
     public int life;
+    private bool ActiveBate;
+    public int currentHealth;
     void Start()
     {
         player = GetComponent<Animator>();
@@ -76,10 +78,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void hurt(float damage)
-    {
-
-    }
+  
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -97,10 +96,25 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Bate")
+        if (this.gameObject.activeInHierarchy)
         {
-            badBoost.SetActive(true);
-            isActiveBoost = true;
+            if (other.tag == "Bate")
+            {
+                badBoost.SetActive(true);
+                isActiveBoost = true;
+            }
         }
+       if (other.tag == "Hit")
+            {
+                currentHealth--;
+                LifeBarPlayer.instanceLife.Damage();
+            }
+        
+    }
+
+    private void DeadPlayer()
+    {
+        if (LifeBarPlayer.instanceLife.LifeBarImageDanger.fillAmount == 0)
+            player.SetTrigger("Dying");
     }
 }

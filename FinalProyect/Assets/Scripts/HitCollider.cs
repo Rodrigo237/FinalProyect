@@ -12,8 +12,6 @@ public class HitCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        PlayerController somebody = other.gameObject.GetComponent<PlayerController>();
-
-      
+        PlayerController somebody = other.gameObject.GetComponent<PlayerController>();     
     }
 }

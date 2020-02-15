@@ -68,7 +68,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: KickWeak
   Damage: 7
-  owner: {fileID: 4325025087718748798}
 --- !u!1 &1311374459
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: PunchWeak
   Damage: 2
-  owner: {fileID: 4325025087718748798}
 --- !u!1 &1467969971
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: KickHard
   Damage: 9
-  owner: {fileID: 4325025087718748798}
 --- !u!1 &2041851162
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: PunchHard
   Damage: 5
-  owner: {fileID: 4325025087718748798}
 --- !u!1 &140586075204516755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +1800,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4ebbe02eb55b3ce4d9acafa4bb0770d7, type: 3}
   badBoost: {fileID: 1942595739409532781}
   life: 0
+  currentHealth: 0
 --- !u!54 &629805278
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2762,11 +2759,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.15336223
       objectReference: {fileID: 0}
-    - target: {fileID: 3326510324496273397, guid: 901829383d31e23468ec0e8526501d9a,
-        type: 3}
-      propertyPath: owner
-      value: 
-      objectReference: {fileID: 4325025087718748798}
     - target: {fileID: 7625880178445949474, guid: 901829383d31e23468ec0e8526501d9a,
         type: 3}
       propertyPath: m_Enabled

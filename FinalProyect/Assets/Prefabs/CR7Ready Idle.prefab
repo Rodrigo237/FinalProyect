@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6774078852503287891}
   m_Layer: 0
   m_Name: HitColliderRightHand
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,7 +68,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: PunchHard
   Damage: 5
-  owner: {fileID: 27851515}
 --- !u!1 &944264798
 GameObject:
   m_ObjectHideFlags: 0
@@ -83,7 +82,7 @@ GameObject:
   - component: {fileID: 944264802}
   m_Layer: 0
   m_Name: HitColliderLeftFoot
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +136,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: KickWeak
   Damage: 7
-  owner: {fileID: 27851515}
 --- !u!1 &1201230790
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +150,7 @@ GameObject:
   - component: {fileID: 1201230794}
   m_Layer: 0
   m_Name: HitColliderRightFoot
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -206,7 +204,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: KickHard
   Damage: 9
-  owner: {fileID: 27851515}
 --- !u!1 &1466854467
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +218,7 @@ GameObject:
   - component: {fileID: 25441573047457326}
   m_Layer: 0
   m_Name: HitColliderLeftHand
-  m_TagString: Untagged
+  m_TagString: Hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -275,7 +272,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchName: PunchWeak
   Damage: 3
-  owner: {fileID: 27851515}
 --- !u!1 &66605645363189547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1837,6 +1833,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4ebbe02eb55b3ce4d9acafa4bb0770d7, type: 3}
   badBoost: {fileID: 0}
   life: 0
+  currentHealth: 0
 --- !u!114 &-3379463341330306673
 MonoBehaviour:
   m_ObjectHideFlags: 0
