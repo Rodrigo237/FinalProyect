@@ -1856,6 +1856,7 @@ MonoBehaviour:
   currentHealth: 0
   life: 1
   jumpEnemy: 0
+  materialHologram: {fileID: 0}
 --- !u!82 &3310571963236060220
 AudioSource:
   m_ObjectHideFlags: 0

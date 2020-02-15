@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
         {
             currentHealth--;
             LifeBar.instanceLife.Damage();
-            GetComponentInChildren<SkinnedMeshRenderer>().material = materialHologram;
+            
 
         }
         Dead();
@@ -78,7 +78,7 @@ public class EnemyController : MonoBehaviour
     {
         if (LifeBar.instanceLife.LifeBarImageDanger.fillAmount == 0 && DataLoader.instance.currentEnemy.livesEnemy > 0)
         {
-            
+            GetComponentInChildren<SkinnedMeshRenderer>().material = materialHologram;
             enemyAnimator.SetTrigger("Dying");
             lifeEnemy--;
             DataLoader.instance.currentEnemy.livesEnemy--;

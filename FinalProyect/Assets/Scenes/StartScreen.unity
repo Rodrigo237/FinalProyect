@@ -158,7 +158,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 100, y: 20.5}
+  m_SizeDelta: {x: 200, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6874372
 MonoBehaviour:
@@ -422,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &118919152
 RectTransform:
   m_ObjectHideFlags: 0
@@ -596,7 +596,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 20.5}
+  m_SizeDelta: {x: 200, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222355233
 MonoBehaviour:
@@ -724,8 +724,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8, y: 0.17}
   m_AnchorMax: {x: 0.7, y: 0.17}
-  m_AnchoredPosition: {x: -27.200012, y: -7.1399994}
-  m_SizeDelta: {x: 167.5, y: 30}
+  m_AnchoredPosition: {x: -39.250004, y: -7.1399994}
+  m_SizeDelta: {x: 229.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269121232
 MonoBehaviour:
@@ -854,7 +854,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 50}
-  m_SizeDelta: {x: 100, y: 20.5}
+  m_SizeDelta: {x: 200, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &302438111
 MonoBehaviour:
@@ -1033,7 +1033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1091,8 +1091,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 89, y: -78.1}
-  m_SizeDelta: {x: 200, y: 59}
+  m_AnchoredPosition: {x: 54.5, y: -78.1}
+  m_SizeDelta: {x: 269, y: 59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456989926
 MonoBehaviour:
@@ -3393,8 +3393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3, y: 0.17}
   m_AnchorMax: {x: 0.2, y: 0.17}
-  m_AnchoredPosition: {x: 10.299995, y: -7.1399994}
-  m_SizeDelta: {x: 167.5, y: 30}
+  m_AnchoredPosition: {x: 19.14, y: -7.1399994}
+  m_SizeDelta: {x: 220.28, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1310045208
 MonoBehaviour:
@@ -3521,6 +3521,7 @@ MonoBehaviour:
     defeats: 0
     musicVolume: 0
     sfxVolume: 0
+    Round: 0
   currentEnemy:
     livesEnemy: 0
   fileName: player.json
@@ -3576,7 +3577,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: 100, y: 20.5}
+  m_SizeDelta: {x: 200, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1380559577
 MonoBehaviour:
@@ -3767,7 +3768,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -25}
-  m_SizeDelta: {x: 100, y: 20.5}
+  m_SizeDelta: {x: 200, y: 20.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1421428920
 MonoBehaviour:
@@ -5312,7 +5313,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 4
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5341,7 +5342,7 @@ MonoBehaviour:
     spaceCount: 1
     wordCount: 2
     linkCount: 0
-    lineCount: 2
+    lineCount: 1
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
