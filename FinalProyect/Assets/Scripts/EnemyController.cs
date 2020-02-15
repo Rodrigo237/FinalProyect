@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     private float randomSetTime;
     private float randomHit;
     public float jumpEnemy;
+    public Material materialHologram;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +68,7 @@ public class EnemyController : MonoBehaviour
         {
             currentHealth--;
             LifeBar.instanceLife.Damage();
-            
+            GetComponentInChildren<SkinnedMeshRenderer>().material = materialHologram;
 
         }
         Dead();
@@ -77,6 +78,7 @@ public class EnemyController : MonoBehaviour
     {
         if (LifeBar.instanceLife.LifeBarImageDanger.fillAmount == 0 && DataLoader.instance.currentEnemy.livesEnemy > 0)
         {
+            
             enemyAnimator.SetTrigger("Dying");
             lifeEnemy--;
             DataLoader.instance.currentEnemy.livesEnemy--;
