@@ -14,10 +14,6 @@ public class BoostGenerator : MonoBehaviour
      
         StartCoroutine("AgregarBoost");
     }
-    private void Update()
-    {
-      
-    }
     IEnumerator AgregarBoost()
     {
         

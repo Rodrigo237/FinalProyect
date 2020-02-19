@@ -117,10 +117,10 @@ public class PlayerController : MonoBehaviour
                 LifeBarPlayer.instanceLife.Damage();
                
             }
-        DeadPlayer();
+        StartCoroutine("DeadPlayer");
     }
 
-    private void DeadPlayer()
+    IEnumerator DeadPlayer()
     {
         if (LifeBarPlayer.instanceLife.LifeBarImageDanger.fillAmount == 0 && DataLoader.instance.currentPlayer.lives>0)
         {
@@ -130,6 +130,7 @@ public class PlayerController : MonoBehaviour
             DataLoader.instance.currentPlayer.defeats++;
             DataLoader.instance.currentPlayer.Round += 1;
             DataLoader.instance.WriteData();
+            yield return new WaitForSeconds(15f);
             SceneManager.LoadScene(1);
         }
         if(DataLoader.instance.currentPlayer.lives == 0 )
@@ -139,6 +140,7 @@ public class PlayerController : MonoBehaviour
             DataLoader.instance.currentPlayer.Round = 1;
             DataLoader.instance.WriteData();
             DataLoader.instance.WriteDataEnemy();
+            yield return new WaitForSeconds(15f);
             SceneManager.LoadScene(0);
         }
 

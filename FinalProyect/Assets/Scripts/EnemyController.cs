@@ -71,10 +71,10 @@ public class EnemyController : MonoBehaviour
             
 
         }
-        Dead();
+        StartCoroutine("Dead");
     }
 
-    private void Dead()
+    IEnumerator Dead()
     {
         if (LifeBar.instanceLife.LifeBarImageDanger.fillAmount == 0 && DataLoader.instance.currentEnemy.livesEnemy > 0)
         {
@@ -86,6 +86,7 @@ public class EnemyController : MonoBehaviour
             DataLoader.instance.currentPlayer.Round += 1;
             DataLoader.instance.WriteData();
             DataLoader.instance.WriteDataEnemy();
+            yield return new WaitForSeconds(15f);
             SceneManager.LoadScene(1);
         }
         if (DataLoader.instance.currentEnemy.livesEnemy == 0 )
@@ -95,6 +96,7 @@ public class EnemyController : MonoBehaviour
             DataLoader.instance.currentPlayer.lives = 2;
             DataLoader.instance.currentPlayer.Round = 1;
             DataLoader.instance.WriteData();
+            yield return new WaitForSeconds(15f);
             SceneManager.LoadScene(0);
 
         }
