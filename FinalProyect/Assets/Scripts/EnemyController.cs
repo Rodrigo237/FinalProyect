@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
     private float randomHit;
     public float jumpEnemy;
     public Material materialHologram;
+    public ParticleSystem fire;
     // Start is called before the first frame update
     void Start()
     {
@@ -86,7 +87,9 @@ public class EnemyController : MonoBehaviour
             DataLoader.instance.currentPlayer.Round += 1;
             DataLoader.instance.WriteData();
             DataLoader.instance.WriteDataEnemy();
-            yield return new WaitForSeconds(15f);
+            fire.Play();
+            yield return new WaitForSeconds(5f);
+            fire.Stop();
             SceneManager.LoadScene(1);
         }
         if (DataLoader.instance.currentEnemy.livesEnemy == 0 )
@@ -96,7 +99,9 @@ public class EnemyController : MonoBehaviour
             DataLoader.instance.currentPlayer.lives = 2;
             DataLoader.instance.currentPlayer.Round = 1;
             DataLoader.instance.WriteData();
-            yield return new WaitForSeconds(15f);
+            fire.Play();
+            yield return new WaitForSeconds(5f);
+            fire.Stop();
             SceneManager.LoadScene(0);
 
         }

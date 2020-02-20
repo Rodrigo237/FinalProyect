@@ -1101,7 +1101,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -11257,6 +11257,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3379463341330306673, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
+        type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 1346879645}
+    - target: {fileID: 27851515, guid: aa2b021ab5a7bc74f8a6754d5df39b4e, type: 3}
+      propertyPath: fireWorks
+      value: 
+      objectReference: {fileID: 1346879645}
     - target: {fileID: 5248836372041473546, guid: aa2b021ab5a7bc74f8a6754d5df39b4e,
         type: 3}
       propertyPath: m_Name
@@ -16546,7 +16555,7 @@ GameObject:
   - component: {fileID: 1070591959}
   - component: {fileID: 1070591958}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Field(1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17126,7 +17135,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -22011,7 +22020,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -27654,7 +27663,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -28471,7 +28480,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 61.2
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -33504,7 +33513,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -38284,7 +38293,7 @@ GameObject:
   - component: {fileID: 1936447509}
   - component: {fileID: 1936447508}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Field
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38450,6 +38459,16 @@ PrefabInstance:
       propertyPath: materialHologram
       value: 
       objectReference: {fileID: 2100000, guid: 066dbb449b078cf49a7dc671bb08c968, type: 2}
+    - target: {fileID: 762523466267791934, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
+        type: 3}
+      propertyPath: fire
+      value: 
+      objectReference: {fileID: 1346879645}
+    - target: {fileID: 4325025087718748798, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
+        type: 3}
+      propertyPath: fireWorks
+      value: 
+      objectReference: {fileID: 1346879645}
     - target: {fileID: 5316582853346620082, guid: 629ab09cdfc026a43b9af8ecaf54d99c,
         type: 3}
       propertyPath: m_Name
@@ -38562,7 +38581,7 @@ GameObject:
   - component: {fileID: 2074154646}
   - component: {fileID: 2074154645}
   m_Layer: 0
-  m_Name: Plane (2)
+  m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38618,7 +38637,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074154644}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -38665,10 +38684,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074154644}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.014500966, z: -0, w: 0.99989486}
   m_LocalPosition: {x: 0, y: 0.01, z: -54.7}
   m_LocalScale: {x: 27.92953, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.6620001, z: 0}

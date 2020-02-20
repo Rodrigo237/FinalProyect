@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public int life;
     private bool ActiveBate;
     public int currentHealth;
+    public  ParticleSystem fireWorks;
     void Start()
     {
         player = GetComponent<Animator>();
@@ -130,8 +131,10 @@ public class PlayerController : MonoBehaviour
             DataLoader.instance.currentPlayer.defeats++;
             DataLoader.instance.currentPlayer.Round += 1;
             DataLoader.instance.WriteData();
-            yield return new WaitForSeconds(15f);
+            fireWorks.Play();
+            yield return new WaitForSeconds(5f);
             SceneManager.LoadScene(1);
+            fireWorks.Stop();
         }
         if(DataLoader.instance.currentPlayer.lives == 0 )
         {
@@ -140,8 +143,10 @@ public class PlayerController : MonoBehaviour
             DataLoader.instance.currentPlayer.Round = 1;
             DataLoader.instance.WriteData();
             DataLoader.instance.WriteDataEnemy();
-            yield return new WaitForSeconds(15f);
+            fireWorks.Play();
+            yield return new WaitForSeconds(5f);
             SceneManager.LoadScene(0);
+            fireWorks.Stop();
         }
 
     }
