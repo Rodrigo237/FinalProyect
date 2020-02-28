@@ -1834,6 +1834,7 @@ MonoBehaviour:
   badBoost: {fileID: 0}
   life: 2
   currentHealth: 0
+  fireWorks: {fileID: 0}
 --- !u!114 &-3379463341330306673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1852,6 +1853,7 @@ MonoBehaviour:
   life: 1
   jumpEnemy: 5
   materialHologram: {fileID: 2100000, guid: 066dbb449b078cf49a7dc671bb08c968, type: 2}
+  fire: {fileID: 0}
 --- !u!82 &1875732095
 AudioSource:
   m_ObjectHideFlags: 0
