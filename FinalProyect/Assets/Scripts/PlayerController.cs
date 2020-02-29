@@ -132,7 +132,7 @@ public class PlayerController : MonoBehaviour
             DataLoader.instance.currentPlayer.Round += 1;
             DataLoader.instance.WriteData();
             fireWorks.Play();
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(10f);
             SceneManager.LoadScene(1);
             fireWorks.Stop();
         }
@@ -144,7 +144,7 @@ public class PlayerController : MonoBehaviour
             DataLoader.instance.WriteData();
             DataLoader.instance.WriteDataEnemy();
             fireWorks.Play();
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(10f);
             SceneManager.LoadScene(0);
             fireWorks.Stop();
         }

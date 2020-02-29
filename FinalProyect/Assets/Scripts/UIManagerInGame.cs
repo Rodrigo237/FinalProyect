@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Audio;
-
+using UnityEngine.SceneManagement;
 public class UIManagerInGame : MonoBehaviour
 {
     public GameObject HUDPanel;
@@ -67,7 +67,7 @@ public class UIManagerInGame : MonoBehaviour
         Debug.Log("Salir");
         DataLoader.instance.WriteData();
         DataLoader.instance.WriteDataEnemy();
-        Application.Quit();
+        SceneManager.LoadScene(0);
     }
 
     public void SetMusic(float volume)

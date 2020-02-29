@@ -37,14 +37,14 @@ public class EnemyController : MonoBehaviour
         if (enemyAgent.remainingDistance <= 7f && enemyAgent.hasPath)
         {
             enemyAnimator.SetTrigger("Stop");
-            randomHit = Random.Range(0,4);
+            randomHit = Random.Range(0,5);
             switch (randomHit){
                 case 0:
             enemyAnimator.SetTrigger("Punch");
                     break;
-                        case 1:
+                case 1:
                     enemyAnimator.SetTrigger("Jab");
-                    break;
+                break;
                 case 2:
                     enemyAnimator.SetTrigger("KickR");
                     break;
@@ -53,6 +53,10 @@ public class EnemyController : MonoBehaviour
                     break;
                 case 4:
                     enemyAnimator.SetTrigger("Jump");
+                    rbEnemy.AddForce(Vector3.up * jumpEnemy, ForceMode.Impulse);
+                    break;
+                case 5:
+                    enemyAnimator.SetTrigger("WalkBack");
                     rbEnemy.AddForce(Vector3.up * jumpEnemy, ForceMode.Impulse);
                     break;
             }
@@ -88,7 +92,7 @@ public class EnemyController : MonoBehaviour
             DataLoader.instance.WriteData();
             DataLoader.instance.WriteDataEnemy();
             fire.Play();
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(10f);
             fire.Stop();
             SceneManager.LoadScene(1);
         }
@@ -100,7 +104,7 @@ public class EnemyController : MonoBehaviour
             DataLoader.instance.currentPlayer.Round = 1;
             DataLoader.instance.WriteData();
             fire.Play();
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(10f);
             fire.Stop();
             SceneManager.LoadScene(0);
 

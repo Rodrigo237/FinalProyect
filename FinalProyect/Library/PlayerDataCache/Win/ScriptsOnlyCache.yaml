@@ -49,8 +49,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineEditorResources
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
@@ -64,7 +62,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -621,7 +618,7 @@ ScriptsOnlyBuild:
     className: DestroyBoots
   - hash:
       serializedVersion: 2
-      Hash: 8220efa3beed61cafb78cdaec8d74131
+      Hash: 3d385e0b65679793b745d8d7ede21532
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyController
@@ -1293,7 +1290,7 @@ ScriptsOnlyBuild:
     className: TextMeshPro
   - hash:
       serializedVersion: 2
-      Hash: 6c3c2a25f2812859047490a088a6a872
+      Hash: 0edcc2570494f974bc0af4b83e74bb58
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1499,4 +1496,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartScreen.unity
   - Assets/Scenes/FightingScene.unity
-  playerPath: C:/Users/Acer/Desktop/Diplomado/BuildFinal/FutFightChampions.exe
+  playerPath: C:/Users/Acer/Desktop/Diplomado/JuegoFinal/FutFightChampions.exe
